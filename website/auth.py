@@ -1,6 +1,6 @@
-from multiprocessing import reduction
 from flask import Blueprint, render_template, redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_user, logout_user, login_required, current_user
 
 from .model import Users
 from . import db
@@ -34,6 +34,7 @@ def signup():
             db.session.add(new_user)
             db.session.commit()
 
+            login_user(new_user, remember=True)
             flash('Account creation successful.', category='success')
 
             return redirect(url_for('views.home'))
@@ -52,14 +53,20 @@ def login():
         if user:
             if check_password_hash(user.password, password):
                 flash("Logged in successfully...", category='success')
+                login_user(user, remember=True)
                 return render_template('home.html', username=username)
+
             else:
                 flash("Incorrect Password! Try again...", category='error')
+
         else:
             flash("Username does not exist! Check again...", category='error')
+
     return render_template('login.html')
 
 
 @ auth.route('/signout')
+@login_required
 def logout():
+    logout_user()
     return redirect(url_for('auth.login'))
