@@ -1,13 +1,14 @@
-# User Authentication with Flask
+# User Profile Web-App
 
 ### How to use
-[Click here](https://user-authentication-flask.herokuapp.com/) to open this web app
-*  It is a simple User Authentication WebApp
-*  You can register yourself here & if you are exsiting user then login.
-*  Just like any other login system 😉
+[Click here](https://user-profile-flask.herokuapp.com/) to open this web app
+*  It is a simple User Profile page just like any other social media twitter, facebook, etc..
+*  Register your self to get your own profile card
+*  Fixing bugs and implimenting new features continuously
+*  If you face any issue please let me know 😉
 
 ## About this project
-This project helped me to understand and enhance my skills. I used Flask API and Bootstrap to build this project. This was my first project I made by my own after learning new skill 'Flask'.
+While making this project I was able to understood Flask API and SQLalchemy more clearly. I learned how to get image and store it in database and then render it in frontend of my app.
 
 ### Setup & Installtion
 
@@ -32,4 +33,5 @@ python main.py
 Go to `http://127.0.0.1:5000`
 
 ## About me
-You can visit my [Portfolio Website](https://abhilashgupta.ml/) to know more about me 🤗
+If you want to know more about me, you can visit my [Portfolio Website](https://abhilashgupta.ml/).</br>
+If you have any creative ideas & you want to discuss them, please feel free to contact me anytime. I'm always looking for such opportunities ❤️
