@@ -1,7 +1,6 @@
 # User Authentication with Flask
 
 ### How to use
-[Click here](https://user-authentication-flask.herokuapp.com/) to open this web app
 *  It is a simple User Authentication WebApp
 *  You can register yourself here & if you are exsiting user then login.
 *  Just like any other login system 😉
